@@ -3,12 +3,7 @@
 - 🌱 I’m currently learning data structures
  
  
-  Hi, I'm an IT student with a passion for programming and technology. 
-  I have experience with a variety of programming languages including C, Java. 
-  I am always eager to learn new technologies and expand my skillset.
-  On GitHub, you can find my personal codings.
-  I am always looking for opportunities to collaborate and learn from others in the tech community.
-  Let's work together to build something great!
+ 
 
 
 
