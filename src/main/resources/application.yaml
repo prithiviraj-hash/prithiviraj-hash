@@ -1,0 +1,70 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enabled: true
+            required: true
+  datasource:
+    url: jdbc:postgresql://192.168.1.16/HIRING_PLATFORM
+    username : postgres
+    password : myPassword
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    mongodb:
+      database: Result
+      uri: mongodb://localhost:27017/Result
+
+#  data:
+#    mongodb:
+#      database: HIRING_PLATFORM
+#      uri: mongodb+srv://deepan:PHp4VnpK2aCwX2Q7@mcqresult.ze52fxm.mongodb.net/
+  servlet:
+    multipart:
+      enabled: true
+server:
+  port: 8081
+  address: 0.0.0.0
+
+
+email :
+  link:
+    employee-availability: "http://localhost:8081/api/v1/employee/response"
+    password-reset: "http://localhost:8081/api/v1/employee/password-reset"
+  task :
+    round :
+      first :
+        welcome : 12
+        start : 30
+      result : 30
+  sender : deepanr9786@gmail.com
+  template:
+    welcome-email: roundEmailNotification.html
+    first-round-mail: roundMail.html
+    result-mail: resultMail.html
+    response-mail: employeeResponse.html
+    employee-interview-notification: employeeInterviewNotification.html
+    interview-reschedule-contestant: emailRescheduleNotification-contestant.html
+
+
+jwt:
+  secret: ioetmhbripojthpiroktpohjrkpojktipoeoirmgeoirjnbouehjroijbet
+  employee-availability:
+    expiration-time: 86400000
+  password-reset: 3600000
+
+
+
+
